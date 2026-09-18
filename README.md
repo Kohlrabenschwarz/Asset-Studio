@@ -22,4 +22,4 @@ See [BUILDING.md](BUILDING.md) for CLI builds and audit tools.
 
 Local checks covered 3,528 files and 13,024 successful texture previews. 33 large textures were skipped; one bundle with a stripped version needs an explicit Unity version. Support is not guaranteed for every bundle. Details: [VALIDATION.md](VALIDATION.md).
 
-Code changes and this README were prepared with **OpenAI Codex (GPT-5-based; exact model version unavailable)**. This is an independent downstream update. Original authorship and licenses are retained; credits and dependency provenance are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Code changes and this README were prepared with **OpenAI Codex (GPT-5.6 SOL)**. This is an independent downstream update. Original authorship and licenses are retained; credits and dependency provenance are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
