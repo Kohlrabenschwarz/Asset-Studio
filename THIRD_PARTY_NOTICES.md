@@ -9,7 +9,7 @@ This downstream update is based on **RazTools/Studio**, not directly on the orig
 | [RazTools/Studio](https://github.com/RazTools/Studio), Razmoth and contributors | Immediate upstream; extended AssetStudio implementation | MIT; root LICENSE preserved |
 | [Perfare/AssetStudio](https://github.com/Perfare/AssetStudio), Perfare and contributors | Original application underlying RazTools/Studio | MIT; original notices preserved, including Radu and hozuki where present |
 | [nesrak1/AssetsTools.NET](https://github.com/nesrak1/AssetsTools.NET) | NuGet 3.0.0 used by the replacement writer | MIT; Resources/AssetsTools.NET-LICENSE.txt; package metadata identifies nesrak1 |
-| [nesrak1/UABEA](https://github.com/nesrak1/UABEA) | Recorded source of the bundled classdata.tpk | UABEA's MIT notice retained in Resources/UABEA-LICENSE.txt; database provenance limitation below |
+| [nesrak1/UABEA](https://github.com/nesrak1/UABEA) | Recorded source of the bundled classdata.tpk | MIT notice retained; binary matched to UABEA revision 057e2f6; details below |
 | [SeriousCache/UABE](https://github.com/SeriousCache/UABE) | Historical basis credited by AssetsTools.NET/UABEA | Credit for that lineage, not a claim that its entire source is included here |
 
 ## Retained upstream credits and research references
@@ -20,7 +20,7 @@ This downstream update is based on **RazTools/Studio**, not directly on the orig
 - [mafaca/UtinyRipper](https://github.com/mafaca/UtinyRipper): retained RazTools credit for YAML and AnimationClipConverter.
 - [K0lb3/UnityPy](https://github.com/K0lb3/UnityPy): related Unity asset research reference. No UnityPy package or Python runtime is shipped in this project; this reference does not assert a verified history of copied code.
 - [Modder4869's tutorial](https://gist.github.com/Modder4869/0f5371f8879607eb95b8e63badca227e): original tutorial credit and link retained.
-- [AssetRipper/Tpk](https://github.com/AssetRipper/Tpk) and its contributors: related class database tooling linked by AssetsTools.NET. Its MIT notice (2022 ds5678) is included for acknowledgment; this is not a verified identification of the exact bundled database's origin or revision.
+- [AssetRipper/Tpk](https://github.com/AssetRipper/Tpk) and its contributors: related class database tooling linked by AssetsTools.NET. This separate repository is MIT, not GPL. Its notice (2022 ds5678) is retained; the bundled database matches UABEA as recorded below.
 
 ## Bundled components and separate terms
 
@@ -32,6 +32,6 @@ Native DLLs inherited from the supplied checkout (including FMOD, FBXNative, HLS
 
 ## Database provenance record and limits
 
-classdata.tpk was already bundled in the supplied working tree and attributed there to UABEA. The original download URL, commit/release identifier, and database generation inputs were not recorded. Including UABEA's MIT license alone does not prove the database's complete licensing chain. The accompanying resource records its SHA-256 so this exact file can be identified; any later verified provenance should be recorded without replacing the original authors' credit.
+The bundled classdata.tpk exactly matches `ReleaseFiles/classdata.tpk` at [UABEA revision 057e2f6ae67ebc94a38faca9f946f8577162fa99](https://github.com/nesrak1/UABEA/blob/057e2f6ae67ebc94a38faca9f946f8577162fa99/ReleaseFiles/classdata.tpk): 289,605 bytes, SHA-256 `129E1F80F930415DB6779FE6089AFA75280CB51462BCEE812BEAB6CD81A764C6`. UABEA is MIT licensed. The original download date and underlying generation inputs remain unverified; the exact byte match now establishes a matching supplier revision. See [LICENSE_REVIEW.md](LICENSE_REVIEW.md) for the code comparison, license distinction, and remaining dependency limits.
 
 This notice distinguishes direct dependencies, inherited credits, and research references. It does not claim that all listed repositories contributed newly copied code or that a comprehensive legal/provenance audit has been completed. Existing LICENSE files and copyright headers have not been removed or reassigned to the downstream user or AI.

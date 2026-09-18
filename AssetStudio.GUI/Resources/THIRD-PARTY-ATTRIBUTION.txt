@@ -1,8 +1,9 @@
 Class database: classdata.tpk
-Recorded supplier: https://github.com/nesrak1/UABEA
-Related database tooling: https://github.com/AssetRipper/Tpk
+Exact matching supplier: https://github.com/nesrak1/UABEA/blob/057e2f6ae67ebc94a38faca9f946f8577162fa99/ReleaseFiles/classdata.tpk
+Supplier repository license: MIT, Copyright (c) 2021 nesrak1
+Size: 289605 bytes
 SHA-256: 129E1F80F930415DB6779FE6089AFA75280CB51462BCEE812BEAB6CD81A764C6
-Exact source revision and generation inputs were not recorded in the supplied checkout.
-UABEA and Tpk notices are preserved; these notices do not establish the database's complete licensing chain.
-See THIRD_PARTY_NOTICES.md for provenance limits.
-Replacement writer: AssetsTools.NET 3.0.0, nesrak1, MIT, https://github.com/nesrak1/AssetsTools.NET
+Related tooling: AssetRipper/Tpk (MIT, Copyright (c) 2022 ds5678)
+Original download date and database generation inputs remain unverified.
+Replacement writer: AssetsTools.NET 3.0.0, nesrak1, MIT
+See LICENSE_REVIEW.md and THIRD_PARTY_NOTICES.md.
