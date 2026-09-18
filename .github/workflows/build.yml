@@ -1,0 +1,40 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Build CLI
+        run: dotnet build AssetStudio.CLI/AssetStudio.CLI.csproj -c Release -f net8.0-windows -m:1
+      - name: Build audit tools
+        shell: pwsh
+        run: |
+          dotnet build BundleAudit/BundleAudit.csproj -c Release -m:1
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          dotnet build ReplacementAudit/ReplacementAudit.csproj -c Release -m:1
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Publish single EXE
+        run: dotnet publish AssetStudio.GUI/AssetStudio.GUI.csproj -c Release -f net8.0-windows -r win-x64 --self-contained true -m:1 -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:IncludeAllContentForSelfExtract=true -o artifacts/gui
+      - name: Verify single-file output
+        shell: pwsh
+        run: |
+          $files = @(Get-ChildItem artifacts/gui -File -Recurse)
+          if ($files.Count -ne 1 -or $files[0].Name -ne 'AssetStudio.GUI.exe') { throw 'Expected exactly one GUI EXE.' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AssetStudio-GUI-win-x64
+          path: artifacts/gui/AssetStudio.GUI.exe
+          if-no-files-found: error
