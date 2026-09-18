@@ -1,0 +1,8 @@
+Class database: classdata.tpk
+Recorded supplier: https://github.com/nesrak1/UABEA
+Related database tooling: https://github.com/AssetRipper/Tpk
+SHA-256: 129E1F80F930415DB6779FE6089AFA75280CB51462BCEE812BEAB6CD81A764C6
+Exact source revision and generation inputs were not recorded in the supplied checkout.
+UABEA and Tpk notices are preserved; these notices do not establish the database's complete licensing chain.
+See THIRD_PARTY_NOTICES.md for provenance limits.
+Replacement writer: AssetsTools.NET 3.0.0, nesrak1, MIT, https://github.com/nesrak1/AssetsTools.NET
