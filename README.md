@@ -2,7 +2,7 @@
 
 Unity asset and bundle viewer based on [RazTools/Studio](https://github.com/RazTools/Studio), which builds on [Perfare/AssetStudio](https://github.com/Perfare/AssetStudio).
 
-This update improves Unity 6 Texture2D, Shader, Renderer, and AnimationClip parsing, supports asset replacement, and provides a single Windows x64 executable.
+This update improves Unity 6 Texture2D, Shader, Renderer, and AnimationClip parsing, supports asset replacement (experimental).
 
 ## Download and use
 
